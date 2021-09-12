@@ -21,9 +21,9 @@ class ImageSpider:
                     valid_links.append(image_url)
                 else:
                     valid_links.append(image_url)
-            print('Done')
+            print('Klaar')
         except Exception as graberror:
-            print('Grab occured while getting links')
+            print('Grab fout tijdens ophalen links')
             print(graberror)
             return []  
         return valid_links
@@ -58,13 +58,13 @@ class ImageSpider:
         return links
 
     def download_images(self):
-        url = input('Enter URL with images : ')
+        url = input('Voer URL met afbeeldingen in : ')
         try:
             sitename = self.extract_site_name(url)
             print('Extracting from {} ...'.format(sitename))
             os.mkdir(sitename);os.chdir(sitename)
-            print('\nShould we can scan entire site or just home page ?')
-            option = int(input('1. Entire site\n2.Just this page\nOption : '))
+            print('\nWil je de hele site downloaden of alleen deze pagina ?')
+            option = int(input('1. Hele site\n2.Alleen deze pagine\nOptie : '))
             if option == 1:
                 all_avaialble_links = set(self.grab_all_links(url))
             else:
@@ -77,7 +77,7 @@ class ImageSpider:
                     continue
 
         except Exception as Error:
-            print('Error occured while grabing site links')
+            print('Foutmelding tijdens grabing links van deze site')
             print(Error)
 
         finally:
