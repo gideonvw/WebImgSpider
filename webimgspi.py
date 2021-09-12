@@ -63,8 +63,8 @@ class ImageSpider:
             sitename = self.extract_site_name(url)
             print('Extracting from {} ...'.format(sitename))
             os.mkdir(sitename);os.chdir(sitename)
-            print('\nWil je de hele site downloaden of alleen deze pagina ?')
-            option = int(input('1. Hele site\n2.Alleen deze pagine\nOptie : '))
+            print('\nWil je de hele website ophalen of alleen deze pagina ?')
+            option = int(input('1. Heleweb site\n2.Alleen deze pagine\nOptie : '))
             if option == 1:
                 all_avaialble_links = set(self.grab_all_links(url))
             else:
@@ -81,7 +81,7 @@ class ImageSpider:
             print(Error)
 
         finally:
-            print('Scraping finished')
+            print('Ophalen van de afbeeldingen is gereed')
             os.chdir(self.home)
 
 

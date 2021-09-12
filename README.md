@@ -2,6 +2,7 @@
 The repo consists of a source of for scraper made in python for downloading/scraping all public available images from a given website.
 
 # Cloned by Gideon 2020-09-12
+Het programma vertaald naar het Nederlands
 
 How it works 
 ----------------
